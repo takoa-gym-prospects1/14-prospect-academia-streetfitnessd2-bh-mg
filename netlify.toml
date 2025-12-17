@@ -1,0 +1,39 @@
+# Netlify Configuration File - Dinâmica Academia
+# Documentação: https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Comando de build
+  command = "npm run build"
+  # Diretório de saída do build
+  publish = "dist"
+
+# Configuração de Headers de Segurança
+[[headers]]
+  # Aplicar a todas as páginas
+  for = "/*"
+  
+  [headers.values]
+    # Proteção contra clickjacking - impede que o site seja carregado em iframes
+    X-Frame-Options = "DENY"
+    
+    # Previne MIME type sniffing - força o navegador a respeitar o Content-Type declarado
+    X-Content-Type-Options = "nosniff"
+    
+    # Força HTTPS por 1 ano (incluindo subdomínios)
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # Controla quais informações de referrer são enviadas
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Desabilita recursos perigosos do navegador que não usamos
+    Permissions-Policy = "geolocation=(), microphone=(), camera=(), payment=()"
+    
+    # Proteção XSS do navegador
+    X-XSS-Protection = "1; mode=block"
+
+# SPA Redirect - Importante para React
+# Garante que qualquer rota acessada caia no index.html (evita 404)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
