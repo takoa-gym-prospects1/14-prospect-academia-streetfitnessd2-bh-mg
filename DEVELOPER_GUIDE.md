@@ -64,3 +64,4 @@ O comando `npm run build` gera arquivos estáticos puros na pasta `dist`, que po
 ---
 **Notas de Versão:**
 - v1.0: Refatoração inicial, centralização de conteúdo e correções de segurança.
+- v1.1: Implementação do Mobile Accordion no Schedule, ajuste de gradiente no FeatureStrip e correção de data automática.

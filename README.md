@@ -1,6 +1,6 @@
-# Dinâmica Academia - Landing Page
+# Street Fitness - Landing Page
 
-Bem-vindo ao repositório do site da **Dinâmica Academia**. Este projeto é uma Landing Page moderna, rápida e otimizada para conversão, desenvolvida com as melhores tecnologias web.
+Bem-vindo ao repositório do site da **Street Fitness**. Este projeto é uma Landing Page moderna, rápida e otimizada para conversão, desenvolvida com as melhores tecnologias web.
 
 ## 🚀 Tecnologias Utilizadas
 
